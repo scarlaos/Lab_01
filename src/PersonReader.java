@@ -34,9 +34,7 @@ public class PersonReader {
 
                 while (reader.ready()) {
                     rec = reader.readLine();
-
-                    String[] fields = rec.split(",");
-                    System.out.printf("%-6s %-12s %-12s %-9s %-4s%n", fields[0], fields[1], fields[2], fields[3], fields[4]);
+                String[] fields = rec.split(","); System.out.printf("%-6s %-12s %-12s %-9s %-4s%n", fields[0], fields[1], fields[2], fields[3], fields[4]);
                 }
                 reader.close();
                 System.out.println("\n\nData file read!");

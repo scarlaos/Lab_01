@@ -2,6 +2,7 @@ public class person {
     private String IDNum;
     private String firstName;
     private String lastName;
+    private String title;
     private int YOB;
     static private int IDSeed = 1;
 
@@ -13,10 +14,11 @@ public class person {
         return IDSeed;
     }
 
-    public person(String IDNum, String firstName, String lastName, int YOB) {
+    public person(String IDNum, String firstName, String lastName, String title, int YOB) {
         this.IDNum = IDNum;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.title=title;
         this.YOB = YOB;
     }
 
@@ -24,6 +26,7 @@ public class person {
         this.IDNum = this.genIDNum();
         this.firstName = firstName;
         this.lastName = lastName;
+        this.title="";
         this.YOB = YOB;
     }
 
@@ -67,6 +70,29 @@ public class person {
         this.YOB = YOB;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String toCSV(){
+        return String.format("%s,%s,%s,%s,%d",IDNum,firstName,lastName,title,YOB);
+    }
+
+    public String toJSON(){
+        return String.format(
+                "{\"id\":\"%s\", \"firstName\":\"%s\",\"lastName\":\"%s\",\"title\":\"%s\",\"yob\":%d}", IDNum, firstName,lastName, title, YOB);
+
+    }
+
+    public String toXML(){
+        return String.format("<person><ID>%s</ID><FirstName>%s</FirstName><LastName>%s</LastName><Title>%s</Title><YOB>%s</YOB></person>", IDNum, firstName, lastName, title, YOB);
+    }
+
+
     @Override
     public String toString() {
         return "person{" +
@@ -76,6 +102,7 @@ public class person {
                 ", YOB=" + YOB +
                 '}';
     }
+
 
 
 }
