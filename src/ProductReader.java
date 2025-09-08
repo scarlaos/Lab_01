@@ -29,9 +29,12 @@ public class ProductReader {
                         new BufferedReader(new InputStreamReader(in));
 
 
+                System.out.printf("%-8s %-13s %-6s %-4s %-10s%n","Item", "Description", "ID", "Cost", "Quantity");
+                System.out.println("=================================================");
+
                 while (reader.ready()) {
                     rec = reader.readLine();
-                    String[] fields = rec.split(","); System.out.printf(fields[0], fields[1], fields[2], fields[3], fields[4]);
+                    String[] fields = rec.split(","); System.out.printf("%-8s %-13s %-6s %-4s %-10s%n", fields[0], fields[1], fields[2], fields[3], fields[4]);
                 }
                 reader.close();
                 System.out.println("\n\nData file read!");
