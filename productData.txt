@@ -1,0 +1,2 @@
+Apple,Red,000001,3.00,5
+Banana,Yellow,000002,4.50,7
