@@ -11,7 +11,6 @@ public class ObjInputTest {
 
     @BeforeEach
     void setUp() {
-        // nothing needed yet
     }
 
     @Test
