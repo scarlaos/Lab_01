@@ -5,7 +5,7 @@ import java.nio.file.Path;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
-public class PersonReader {
+public class PersonReader extends PersonTest {
     public static void main(String[] args) {
         JFileChooser chooser = new JFileChooser();
         File selectedFile;

@@ -14,7 +14,7 @@ public class SafeInputObj {
         {
             System.out.print("\n" + prompt + ": ");
             retString = pipe.nextLine();
-        }while(retString.length() == 0); // until we have some characters
+        }while(retString.length() == 0);
 
         return retString;
 

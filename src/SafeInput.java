@@ -11,8 +11,7 @@ import java.util.Scanner;
  *
  * @author Tom Wulf Tom.Wulf@uc.edu
  */
-public class SafeInput 
-{
+public class SafeInput extends ObjInputTest {
    /**
     * Get a String which contains at least one character
     * @param pipe a Scanner opened to read from System.in

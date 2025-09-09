@@ -5,7 +5,7 @@ import java.nio.file.Path;
 
 import static java.nio.file.StandardOpenOption.CREATE;
 
-public class ProductReader {
+public class ProductReader extends product {
     public static void main(String[] args) {
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
