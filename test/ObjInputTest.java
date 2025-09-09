@@ -15,7 +15,7 @@ public class ObjInputTest {
 
     @Test
     void testGetNonZeroLenString() {
-        String input = "Hello\n";  // must include newline
+        String input = "Hello\n";
         provideInput(input);
 
         safeInput = new SafeInputObj();
